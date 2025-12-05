@@ -977,201 +977,6 @@ footer {
    iOS Background Fix
 ======================================== */
 body {
-
-    /* ステップカード */
-    .steps-container {
-        gap: 3rem;
-        margin-top: 3rem;
-    }
-
-    .step-card {
-        padding: 2.5rem 1rem;
-    }
-
-    .step-number {
-        width: 45px;
-        height: 45px;
-        font-size: 1.1rem;
-        top: -22px;
-    }
-
-    .step-title {
-        font-size: 1.2rem;
-        margin-top: 0.5rem;
-        margin-bottom: 1.5rem;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-    }
-
-    .step-subtitle {
-        font-size: 0.85rem;
-        display: block;
-        margin-left: 0;
-        margin-top: 0.5rem;
-    }
-
-    .step-card p {
-        font-size: 0.95rem;
-        line-height: 1.9;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-    }
-
-    /* ベネフィット */
-    .benefits-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        margin-top: 2rem;
-    }
-
-    .benefit-item {
-        padding: 1.5rem;
-    }
-
-    .benefit-title {
-        font-size: 1.1rem;
-        margin-bottom: 1rem;
-        line-height: 1.5;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-    }
-
-    .benefit-item p {
-        font-size: 0.9rem;
-        line-height: 1.9;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-    }
-
-    /* お客様の声 */
-    .testimonials-container {
-        gap: 2rem;
-    }
-
-    .testimonial-card {
-        padding: 1.5rem;
-    }
-
-    .testimonial-quote {
-        font-size: 1rem;
-        margin-bottom: 1rem;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-    }
-
-    .testimonial-text {
-        font-size: 0.9rem;
-        line-height: 1.9;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-    }
-
-    .testimonial-author {
-        font-size: 0.8rem;
-    }
-
-    /* 警告セクション */
-    .warning-title {
-        font-size: 1.4rem;
-    }
-
-    .warning-subtitle {
-        font-size: 1.1rem;
-        margin-bottom: 2rem;
-    }
-
-    .warning-box {
-        padding: 1.5rem;
-        margin: 2rem 0;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-    }
-
-    .final-emphasis {
-        font-size: 1.5rem;
-        margin-top: 2rem;
-    }
-
-    /* エピローグ */
-    .epilogue {
-        padding: 5rem 0;
-    }
-
-    .closing-message {
-        margin-top: 3rem;
-        padding: 2rem 1rem;
-    }
-
-    .date {
-        margin-top: 2rem;
-        font-size: 0.8rem;
-    }
-
-    .author {
-        font-size: 1.2rem;
-    }
-
-    /* ローディング画面 */
-    .loading-dragon {
-        width: 150px;
-    }
-
-    /* 段落テキストの改行制御 */
-    p {
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        word-break: break-word;
-        hyphens: auto;
-    }
-
-    /* リンクとインラインテキストの改行 */
-    a,
-    span {
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-    }
-}
-
-/* 超小型デバイス (320px - 360px) */
-@media (max-width: 360px) {
-    body {
-        font-size: 13px;
-    }
-
-    .container {
-        padding: 0 0.75rem;
-    }
-
-    .hero-title {
-        font-size: 2rem;
-    }
-
-    .section-title {
-        font-size: 1.2rem;
-    }
-
-    .concept-title {
-        font-size: 1.1rem;
-    }
-
-    .step-card {
-        padding: 2rem 0.75rem;
-    }
-
-    .benefit-item,
-    .testimonial-card {
-        padding: 1.25rem;
-    }
-
-    .closing-message {
-        padding: 1.5rem 0.75rem;
-    }
-}
-
-/* ========================================
-   iOS Background Fix
-======================================== */
-body {
     background-image: none;
     background-blend-mode: normal;
     position: relative;
@@ -1272,4 +1077,20 @@ footer {
     .loading-title {
         font-size: 2rem;
     }
+}
+
+/* ========================================
+   Emphasis Styles
+======================================== */
+.highlight-gold {
+    color: var(--color-accent);
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(197, 160, 89, 0.4);
+}
+
+.highlight-strong {
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(transparent 60%, rgba(197, 160, 89, 0.3) 60%);
+    padding-bottom: 2px;
 }
