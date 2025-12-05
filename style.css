@@ -642,6 +642,7 @@ footer {
    モバイル対応 (320px - 414px)
 ======================================== */
 @media (max-width: 414px) {
+
     /* 基本設定 */
     body {
         font-size: 14px;
@@ -973,5 +974,305 @@ footer {
 
     .closing-message {
         padding: 1.5rem 0.75rem;
+    }
+}
+
+/* ========================================
+   iOS Background Fix
+======================================== */
+body {
+
+    /* ステップカード */
+    .steps-container {
+        gap: 3rem;
+        margin-top: 3rem;
+    }
+
+    .step-card {
+        padding: 2.5rem 1rem;
+    }
+
+    .step-number {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+        top: -22px;
+    }
+
+    .step-title {
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+        margin-bottom: 1.5rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .step-subtitle {
+        font-size: 0.85rem;
+        display: block;
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+
+    .step-card p {
+        font-size: 0.95rem;
+        line-height: 1.9;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    /* ベネフィット */
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .benefit-item {
+        padding: 1.5rem;
+    }
+
+    .benefit-title {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        line-height: 1.5;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .benefit-item p {
+        font-size: 0.9rem;
+        line-height: 1.9;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    /* お客様の声 */
+    .testimonials-container {
+        gap: 2rem;
+    }
+
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+
+    .testimonial-quote {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .testimonial-text {
+        font-size: 0.9rem;
+        line-height: 1.9;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .testimonial-author {
+        font-size: 0.8rem;
+    }
+
+    /* 警告セクション */
+    .warning-title {
+        font-size: 1.4rem;
+    }
+
+    .warning-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .warning-box {
+        padding: 1.5rem;
+        margin: 2rem 0;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .final-emphasis {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    /* エピローグ */
+    .epilogue {
+        padding: 5rem 0;
+    }
+
+    .closing-message {
+        margin-top: 3rem;
+        padding: 2rem 1rem;
+    }
+
+    .date {
+        margin-top: 2rem;
+        font-size: 0.8rem;
+    }
+
+    .author {
+        font-size: 1.2rem;
+    }
+
+    /* ローディング画面 */
+    .loading-dragon {
+        width: 150px;
+    }
+
+    /* 段落テキストの改行制御 */
+    p {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
+    }
+
+    /* リンクとインラインテキストの改行 */
+    a,
+    span {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+}
+
+/* 超小型デバイス (320px - 360px) */
+@media (max-width: 360px) {
+    body {
+        font-size: 13px;
+    }
+
+    .container {
+        padding: 0 0.75rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+    }
+
+    .concept-title {
+        font-size: 1.1rem;
+    }
+
+    .step-card {
+        padding: 2rem 0.75rem;
+    }
+
+    .benefit-item,
+    .testimonial-card {
+        padding: 1.25rem;
+    }
+
+    .closing-message {
+        padding: 1.5rem 0.75rem;
+    }
+}
+
+/* ========================================
+   iOS Background Fix
+======================================== */
+body {
+    background-image: none;
+    background-blend-mode: normal;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('mystical_pattern_bg.png');
+    background-repeat: repeat;
+    background-size: 300px;
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 0;
+}
+
+main,
+footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* ========================================
+   Loading Logo Styles
+======================================== */
+.loading-title {
+    font-size: 4rem;
+    color: #fff;
+    font-family: var(--font-mincho);
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    margin: 0;
+    opacity: 0;
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.8),
+        0 0 20px rgba(197, 160, 89, 0.8),
+        0 0 40px rgba(197, 160, 89, 0.4);
+    animation: logoReveal 3s ease-out forwards;
+}
+
+@keyframes logoReveal {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    20% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    80% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+}
+
+.loading-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.loading-text {
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+    letter-spacing: 0.5em;
+    opacity: 0;
+    animation: logoReveal 3s ease-out forwards;
+    animation-delay: 0.5s;
+    /* Slight delay for text */
+}
+
+.loading-text p {
+    margin: 0.5rem 0;
+    text-shadow: 0 0 10px rgba(197, 160, 89, 0.5);
+}
+/* Mobile Optimization for Loading Title */
+@media (max-width: 768px) {
+    .loading-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .loading-title {
+        font-size: 2rem;
     }
 }
